@@ -7,7 +7,7 @@ resp = urllib.request.urlopen('http://www.nba.com/standings/team_record_comparis
 doc = resp.read()
 soup = BeautifulSoup(doc, 'html.parser')
 
-f = open(os.path.expanduser("~/Desktop/standings.txt"),'w')
+f = open("standings.txt",'w')
 errorFile = open(os.path.expanduser("~/Desktop/errors.txt"),'w')
 
 tableStats = soup.find("table", attrs={"class" : "genStatTable mainStandings"})
